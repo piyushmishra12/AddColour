@@ -7,4 +7,11 @@ This is a demonstration of colourising black and white images using a slightly m
 ### Workflow
 Since the model must learn to colourise greyscale images, the pet dataset is sampled and each image is greyscaled and put into a separate folder. The greyscaled images are stored by mapping to their corresponding RGB counterparts to ensure cohesiveness and understandability.
 
+#### Generator
 These greyscaled images are put into a *generator* and subsequently taught to generate their RGB counterparts. This is achieved by using a [U-net](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) for the generator. In a U-net, besides the normal downsampling (encoding) and upsampling (decoding) stages, there are skip-connections that help the learner keep in touch with the input vectors. 
+
+<p align="center">
+  <img width="460" height="300" src="https://github.com/piyushmishra12/Colourise-Image-GAN/blob/master/unet.png">
+</p>
+
+The reconstructed images are compared with the ground truths with the help of the mean squared error loss function and back-propagated appropriately. In 2 epochs (computation cost of around 5 minutes), a validation loss of 0.096118 is achieved.
