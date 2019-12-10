@@ -25,3 +25,6 @@ A GAN is simply an interconnection of the generator and the critic. The generato
 <p align="center">
   <img width="460" height="300" src="https://github.com/piyushmishra12/Colourise-Image-GAN/blob/master/result.png">
 </p>
+
+### Future Scope
+From the set of results, the model has learnt to identify greens and browns, but still struggles with reds and blues. This can potentially be achieved by further interaction between the generator and the critic, so that the critic further criticises the generator.
