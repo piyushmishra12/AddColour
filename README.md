@@ -5,7 +5,7 @@ This is a demonstration of colouring black and white images using a slightly mod
 </p>
 
 ### Workflow
-Since the model must learn to colourise greyscale images, the pet dataset is sampled and each image is greyscaled and put into a separate folder. The greyscaled images are stored by mapping to their corresponding RGB counterparts to ensure cohesiveness and understandability.
+Since the model must learn to add colour to greyscale images, the pet dataset is sampled and each image is greyscaled and put into a separate folder. The greyscaled images are stored by mapping to their corresponding RGB counterparts to ensure cohesiveness and understandability.
 
 #### Generator
 These greyscaled images are put into a *generator* and subsequently taught to generate their RGB counterparts. This is achieved by using a [U-net](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28) for the generator. In a U-net, besides the normal downsampling (encoding) and upsampling (decoding) stages, there are skip-connections that help the learner keep in touch with the input vectors. 
