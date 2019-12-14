@@ -25,6 +25,8 @@ A GAN is simply an interconnection of the generator and the critic. The generato
 <p align="center">
   <img width="460" height="300" src="https://github.com/piyushmishra12/Colourise-Image-GAN/blob/master/result.png">
 </p>
+### GAN-ish
+This isn't a proper GAN. In a GAN, the generator and the critic enter into the model without any prior training. So the two entities learn everything while interacting with each other. Here, the generator and the critic are made two separate entities, they first learn independently and then they are put into the model. This is to simulate transfer learning by making a pretrained generator and critic. This helps in time efficiency while training the GAN.
 
 ### Future Scope
 From the set of results, the model has learnt to identify greens and browns, but still struggles with reds and blues. This can potentially be achieved by further interaction between the generator and the critic, so that the critic further criticises the generator.
