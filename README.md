@@ -1,4 +1,4 @@
-# Colour-Image-GAN
+# AddColour
 This is a demonstration of colouring black and white images using a slightly modified Generative Adversarial Network (GAN). The training is done on a specifically curated dataset which is sampled from the [Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) using [fastai](https://github.com/fastai).
 <p align="center">
   <img width="460" height="300" src="https://github.com/piyushmishra12/Colourise-Image-GAN/blob/master/Screenshot%202019-12-10%20at%208.53.18%20PM.png">
@@ -27,7 +27,7 @@ A GAN is simply an interconnection of the generator and the critic. The generato
 </p>
 
 ### GAN-ish
-This isn't a proper GAN. In a GAN, the generator and the critic enter into the model without any prior training. So the two entities learn everything while interacting with each other. Here, the generator and the critic are made two separate entities, they first learn independently and then they are put into the model. This is to simulate transfer learning by making a pretrained generator and critic. This helps in time efficiency while training the GAN.
+This isn't a proper GAN. In a GAN, the generator and the critic enter into the model without any prior training. So the two entities learn everything while interacting with each other. Here, the generator and the critic are created initially as two separate entities; they first learn independently and then they are put into the model to interact with each other. This is to simulate transfer learning by making a pretrained generator and critic. This helps in time efficiency while training the GAN since in a normal GAN, it takes a lot of initial time for the model to learn basic features, after which it picks up the pace [(refer0](https://www.jstage.jst.go.jp/article/pjsai/JSAI2017/0/JSAI2017_1A32/_pdf/-char/en).
 
 ### Future Scope
 From the set of results, the model has learnt to identify greens and browns, but still struggles with reds and blues. This can potentially be achieved by further interaction between the generator and the critic, so that the critic further criticises the generator.
